@@ -1,9 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'nokogiri', '~> 1.5.0'
+gem 'nokogiri', '1.4.1'
 
 group :developement do
   gem 'rspec', '~> 2.6'
-  gem 'rake', '>= 0.9'
-  gem 'rdoc'
 end

@@ -302,7 +302,7 @@ module BigBlueButton
 
     def send_api_request(method, data = {})
       url = get_url(method, data)
-
+     
       @http_response = send_request(url)
       return { } if @http_response.body.empty?
 

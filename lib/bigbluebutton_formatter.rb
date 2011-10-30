@@ -20,7 +20,7 @@ module BigBlueButton
 
     # converts a value in the @hash to DateTime
     def to_datetime(key)
-      @hash[key] = @hash[key].downcase == "null" ? nil : DateTime.parse(@hash[key])
+      @hash[key] = @hash[key] == 0 ? nil : Time.at(@hash[key])
     end
 
     # Default formatting for all responses given by a BBB server
