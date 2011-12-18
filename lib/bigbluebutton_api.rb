@@ -56,7 +56,7 @@ module BigBlueButton
       @url = url
       @salt = salt
       @debug = debug
-      @timeout = 2 # 2 seconds timeout for get requests
+      @timeout = 10 # 2 seconds timeout for get requests
 
       @version = version || get_api_version
       unless @supported_versions.include?(@version)
