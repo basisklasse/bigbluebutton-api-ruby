@@ -112,13 +112,13 @@ module BigBlueButton
     #
     def create_meeting(meeting_name, meeting_id, moderator_password = nil, attendee_password = nil,
                        welcome_message = nil, dial_number = nil, logout_url = nil,
-                       max_participants = nil, voice_bridge = nil)
+                       max_participants = nil, voice_bridge = nil, host = nil)
 
       params = { :name => meeting_name, :meetingID => meeting_id,
                  :moderatorPW => moderator_password, :attendeePW => attendee_password,
                  :welcome => welcome_message, :dialNumber => dial_number,
                  :logoutURL => logout_url, :maxParticpants => max_participants,
-                 :voiceBridge => voice_bridge }
+                 :voiceBridge => voice_bridge, :kluuuHost => host }
 
       response = send_api_request(:create, params)
 
